@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Mart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        
+        .service {
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service img {
+            max-width: 100%;
+            height:20rem ;
+            
+        }
+        
+        /* Add more styles as needed */
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Mobile Shop Services</h1>
+    </header>
+    
+    <section class="services">
+        <div class="service">
+            <img src="services1.jpg" alt="Service 1" >
+            <h2>Mobile Repair</h2>
+            <p>We offer professional mobile repair services for all major brands.</p>
+        </div>
+        
+        <div class="service">
+            <img src="service2.jpg" alt="Service 2">
+            <h2>Phone Accessories</h2>
+            <p>Explore a wide range of phone accessories, including cases, chargers, and more.</p>
+        </div>
+        
+        <div class="service">
+            <img src="service3.jpg" alt="Service 3">
+            <h2>Device Trade-In</h2>
+            <p>Trade in your old device for a discount on your new mobile purchase.</p>
+        </div>
+    </section>
+
+    <script>
+      
+
+const services = document.querySelectorAll('.service');
+
+services.forEach((service) => {
+    service.addEventListener('mouseenter', () => {
+        service.style.transform = 'scale(1.05)';
+        service.style.transition = 'transform 0.2s ease';
+    });
+
+    service.addEventListener('mouseleave', () => {
+        service.style.transform = 'scale(1)';
+        service.style.transition = 'transform 0.2s ease';
+    });
+});
+
+    </script>
+</body>
+</html>
